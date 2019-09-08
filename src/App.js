@@ -54,19 +54,18 @@ class MoviesFrom80s extends React.Component {
                                     className="col img"
                                     src={movie.imageUrl}
                                     alt={movie.title}
-                                    onClick={() => {this.handleShow(index)}}
+                                    onClick={() => {this.handleShow(index);}}
                                     key={index}
                                 />
 
                                  {this.state.currentRec !== undefined &&
                                      <Modal {...this.props}
                                             show={this.state.show}
-                                            onHide={() => {this.state.currentRec.handleHide(index)}}
-                                         // dialogClassName="custom-modal"
+                                            onHide={() => {this.state.handleHide(index);}}
+                                            dialogClassName="custom-modal"
                                             className='modal'>
                                          <Modal.Header closeButton>
                                              <Modal.Title id="contained-modal-title-lg">
-                                                 {index}
                                                  {movie.title}
                                              </Modal.Title>
                                          </Modal.Header>
